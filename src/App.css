@@ -31,3 +31,293 @@
     transform: rotate(360deg);
   }
 }
+.nav-bar-login{
+  padding-left: 77%;
+}
+.carousel-size{
+  height: 80vh;
+} 
+.img-fluid1 {
+    height: 13vh;
+}
+.carousel-item .img-fluid {
+  width:100%;
+  height:100%;
+}
+.carousel-item > img{
+  height: 50px;
+}
+.cap{
+  width:30vh;
+  height:30vh;
+}
+.section2{
+  margin-top: 5vh;
+}
+.section2-backcolor{
+  background-color: rgb(0,215,255) !important;
+}
+.section3{
+  background-color: gray !important;
+  margin-bottom: 0 !important;
+  margin-top: 5vh;
+}
+.navbar-quepago{
+  background-color: rgb(0,106,130) !important;
+}
+body{
+  margin: 0;
+}
+.navbar{
+  background: #24ABCC;
+}
+#section1{
+  padding: 0;
+ 
+}
+.iconeM{
+ font-size: 10vh;
+}
+.account-img{
+ height: 6vh; 
+ fill: #FFF;
+}
+.section1a{
+  margin-top: 12%;
+  height: 15%;
+  width: 3%;
+  background: #2DD6FF;
+}
+.carousel-control-prev{
+  background: #2DD6FF;
+  margin: 34vh 0vh;
+}
+.carousel-control-next{
+  background: #2DD6FF;
+  margin: 34vh 0vh;
+}
+.section1ha{
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2.5px;
+  font-size: 2.8em;
+}
+.carousel-caption > h5{
+ color: #000000;
+}
+.section1hb{
+  color: black;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2.5px;
+  font-size: 2.8em;
+}
+.section1hc{
+  color: #166A7F;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2.5px;
+  font-size: 2.8em;
+}
+#section-im1{
+  background: url('./img/long_line.jpg');
+  filter: grayscale(30%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+ 
+}
+#section-im2{
+  background: url('./img/olvidar.jpg');
+  filter: grayscale(30%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  
+
+}
+#section-im3{
+  background: url('./img/sin_pago.jpg');
+  filter: grayscale(30%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+ 
+
+}
+.section-2{
+  color: #FFF;
+  background: #2DD6FF !important;
+}
+.section6{
+  color: #aaaaaa;
+  background: #166A7F;
+  border-top: 4px solid#7AE5FF; 
+  margin-bottom: 10vh;
+  padding: 2% 0% 2% 0%;
+}
+.section6cl{
+  list-style: none;
+  padding: 0;
+}
+.section6cl > li > a{
+  color: #aaaaaa;
+}
+.section6cl > li{
+  padding-bottom: 2.3%;
+  padding-top: 2.3%; 
+  border-bottom: 2px dotted #aaaaaa;
+}
+.section7{
+  color: #FFF;
+  background: #3C727F;
+  padding: 2% 0% 2% 0%;
+  font-size: 12px;
+}
+.section7 > div > div > div > a{
+  color: #FFF;
+}
+.section-3{
+  text-align: center;
+}
+.section-4{
+  border-bottom: 1px solid #e1e1e1; 
+  padding: 0;
+  margin-bottom: 2%;
+}
+.section-4 > h2{ 
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.section-4p{
+  padding: 0;
+  margin-bottom: 4%;
+}
+.section-4p > div > h3 > a{
+  color: #000000;
+  font-weight: bolder;
+}
+.section-4p > div > h3{
+  margin: 1% 0% 2% 0%;
+  font-size: 1.1em;
+  line-height: 1.2;
+
+}
+.time-p{
+  color: #f2544f;
+}
+/*.circle{
+  border: 5px solid #FFF;
+  border-radius: 60%;
+  padding: 30px 15px 20px 15px; 
+
+  line-height: 1.6em;
+}*/
+.section2-h{
+  margin-top: 13%;
+}
+.nav-list-a{
+  color: #aaaaaa;
+}
+.nav-list-color > a{
+  color: #aaaaaa;
+}
+.home-co{
+  color: #FFF;
+}
+.section1h{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.4em;
+}
+.frmore{
+  color: black;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.user-section1{
+  height: 100vh;
+  margin-top: 12vh;
+  padding-top: 4vh;
+}
+.btn-agregar{
+  height: 8vh;
+  font-size: 4vh;
+}
+.user-section1-btn-agregar{
+  margin-bottom: 5vh;
+  padding-top: 7vh;
+}
+.table-row-service{
+  margin-bottom: 5vh;
+}
+table th, table td{
+  padding: 10px; 
+}
+.code-qr{
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}
+.form-header{
+  margin: 5vh 0vh 5vh 0vh;
+}
+.cashier-header{
+  margin: 5vh 0vh 5vh 0vh;
+}
+.cashier-view{
+  background-color: #7AE5FF;
+}
+.cashier-view-text{
+  color: #FFF;
+}
+.status-pago{
+  color: green !important; 
+}
+a{
+  color: black !important;
+}
+.loginPage{
+  margin-top: 20vh;
+}
+.nav-item{
+margin: 1vh;
+}
+.fcred > span {
+  margin: 1.5vh;
+}
+.ServicesUserSection{
+  margin-top: 13vh;
+}
+.project-list-style{
+  margin: 13vh 0vh;
+
+}
+.card-w{
+  width: 600px;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-w > img{
+  height: 200px;
+  width: 300px;
+  margin: 2vh;
+}
+.item-list{
+  height: 120px !important;
+  width: 60px !important;
+}
+
+.navbar-home{
+  color: #FFF;
+}
+.card-services{
+  margin: 2% 4%;
+}
+.links-login{
+  margin: 2% 1%;
+}
