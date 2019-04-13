@@ -6,7 +6,12 @@ class EditProject extends Component {
     super(props);
     this.state = {
         title: this.props.theProject.title, 
-        description: this.props.theProject.description
+        description: this.props.theProject.description,
+        telephone: this.props.theProject.telephone,
+        email: this.props.theProject.email,
+        account: this.props.theProject.account,
+        status: this.props.theProject.status,
+        service: this.props.theProject.service
     }
   }
 
@@ -14,10 +19,15 @@ class EditProject extends Component {
   handleFormSubmit = (event) => {
     const title = this.state.title;
     const description = this.state.description;
+    const  telephone = this.state.telephone;
+  const email = this.state.email;
+  const account = this.state.account;
+  const status = this.state.status;
+  const service = this.state.service;
 
     event.preventDefault();
 
-    axios.put(`http://localhost:5000/api/projects/${this.props.theProject._id}`, { title, description }, {withCredentials:true})
+    axios.put(`http://localhost:5000/api/projects/${this.props.theProject._id}`, { title, description, service, telephone, email, account ,status }, {withCredentials:true})
     .then( () => {
         this.props.getTheProject();
         // after submitting the form, redirect to '/projects'
@@ -40,16 +50,16 @@ class EditProject extends Component {
 
   render(){
     return (
-      <div className="project-list-style">
+      <div className="project-list-style container">
         <hr />
-        <h3>Edit form</h3>
+        <h3>Edita información del servicio</h3>
         <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
-          <input type="text" name="title" value={this.state.title} onChange={e => this.handleChangeTitle(e)}/>
-          <label>Description:</label>
-          <textarea name="description" value={this.state.description} onChange={e => this.handleChangeDesc(e)} />
+          <label>Identificador:</label>
+          <input type="text" name="title"  className="form-control" value={this.state.title} onChange={e => this.handleChangeTitle(e)}/>
+          <label>Descripción:</label>
+          <textarea name="description" className="form-control" value={this.state.description} onChange={e => this.handleChangeDesc(e)} />
           
-          <input type="submit" value="Submit" />
+          <input className="btn btn-success form-control agregar" type="submit" value="Guardar" />
         </form>
       </div>
     )

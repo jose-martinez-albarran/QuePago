@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class Signup extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { username: '', password: '' , name: '', email:''};
     this.service = new AuthService();
   }
 
@@ -13,12 +13,16 @@ class Signup extends Component {
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
+    const name = this.state.name;
+    const email = this.state.email;
   
-    this.service.signup(username, password)
+    this.service.signup(username, password, name, email)
     .then( response => {
         this.setState({
             username: "", 
             password: "",
+            name: "",
+            email: ""
         });
         this.props.getUser(response)
     })
@@ -42,6 +46,14 @@ class Signup extends Component {
         <div className="form-group"> 
           <label><h3>Contraseña:</h3></label>
           <input name="password"  type="password" value={this.state.password} className="form-control"  placeholder="Contraseña" onChange={ e => this.handleChange(e)} />
+        </div>
+        <div className="form-group"> 
+          <label><h3>Nombre:</h3></label>
+          <input name="text"  type="name" value={this.state.name} className="form-control"  placeholder="Nombre" onChange={ e => this.handleChange(e)} />
+        </div>
+        <div className="form-group"> 
+          <label><h3>Correo:</h3></label>
+          <input name="text"  type="email" value={this.state.email} className="form-control"  placeholder="Correo" onChange={ e => this.handleChange(e)} />
         </div>
           <input type="submit" value="Registrarse" className="btn btn-primary"/>
           <p>¿Ya te encuentras registrado? 

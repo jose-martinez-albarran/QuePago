@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import QRCode from 'react-qr-code';
+ 
 import AddProject from './AddProject';
 
 class ProjectList extends Component {
@@ -34,9 +35,9 @@ class ProjectList extends Component {
               <div className="card col-sm-5 card-services" key={project._id}>
                  <div className="card-body">
                     <Link to={`/projects/${project._id}`}>
-                      <h3>{project.title}</h3>
+                      <h3>{project.service}</h3>
                     </Link>
-                    <p>{project.description}</p>
+                    <p>{project.title}</p>
                  </div>
               </div>
             )})
@@ -57,9 +58,13 @@ class ProjectList extends Component {
         <div>
             <h1 className="text-center col-lg-12 code-qr">TU CÓDIGO</h1>
             <div className="col-lg-12">
-            <img className="mx-auto d-block" height="200px" src="https://smallbiztrends.com/wp-content/uploads/2015/05/qr-code-sample.jpg" alt="qr" />
+            
             </div>
-        </div>        
+        </div>
+        <div>
+        <QRCode value="www.record.com.mx"></QRCode>    
+        </div>
+              
         </div>
       </div>
     )

@@ -36,7 +36,7 @@ class ProjectDetails extends Component {
     }
   }
 
-// DELETE PROJECT:
+
   deleteProject = (id) => {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/api/projects/${params.id}`, {withCredentials:true})
@@ -52,8 +52,8 @@ class ProjectDetails extends Component {
     if(this.props.loggedInUser && project.owner == this.props.loggedInUser._id){
       return (
         <div>
+                    <button className="btn btn-danger form-control" onClick={() => this.deleteProject(this.state._id)}>Borrar Servicio</button>
           <div>{this.renderEditForm()} </div>
-          <button onClick={() => this.deleteProject(this.state._id)}>Delete project</button>
         </div>
       )
     } 
@@ -61,13 +61,14 @@ class ProjectDetails extends Component {
   
   render(){
     return(
-      <div className="project-list-style ">
+      <div className="project-list-style container">
         <h1>{this.state.title}</h1>
         <p>{this.state.description}</p>
+        <Link className="btn btn-link" to={'/projects'}>Regresar a tus Servicios</Link>
         <div >
-          {this.ownershipCheck(this.state)}
-        </div>
-        <Link to={'/projects'}>Back to projects</Link>
+        {this.ownershipCheck(this.state)}
+          </div>
+        
       </div>
     )
   }

@@ -291,8 +291,8 @@ margin: 1vh;
   margin-top: 13vh;
 }
 .project-list-style{
-  margin: 13vh 0vh;
-
+  margin: 18vh 0vh;
+  text-transform: uppercase;
 }
 .card-w{
   width: 600px;
@@ -320,4 +320,10 @@ margin: 1vh;
 }
 .links-login{
   margin: 2% 1%;
+}
+.agregar-servicio{
+ margin-top: 10vh;
+}
+.agregar{
+  margin-top: 2vh;
 }
