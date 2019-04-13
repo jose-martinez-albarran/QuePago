@@ -19,11 +19,11 @@ class AddProject extends Component {
   const status = this.state.status;
   const service = this.state.service;
     console.log(this.state)
-    axios.post("http://localhost:5000/api/projects", { title, description, service, telephone, email, account ,status}, {withCredentials:true})
+    axios.post(`${process.env.REACT_APP_API_URL}/projects`, { title, description, service, telephone, email, account ,status}, {withCredentials:true})
     .then( () => {
         //this.props.getData();
         this.setState({title: "", description: "", service: "", telephone: "", email: "", account:"", status:"",  save: true});
-        this.props.history.push('/projects');
+        this.props.history.push('/services');
     })
     .catch( error => console.log(error) )
   }

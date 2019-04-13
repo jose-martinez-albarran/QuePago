@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import QRCode from 'react-qr-code';
  
-import AddProject from './AddProject';
 
 class ProjectList extends Component {
   constructor(){
@@ -12,7 +11,7 @@ class ProjectList extends Component {
   }
 
   getAllProjects = () =>{
-    axios.get(`http://localhost:5000/api/projects`, {withCredentials:true})
+    axios.get(`${process.env.REACT_APP_API_URL}/projects`, {withCredentials:true})
     .then(responseFromApi => {
       this.setState({
         listOfProjects: responseFromApi.data
@@ -34,7 +33,7 @@ class ProjectList extends Component {
             return (
               <div className="card col-sm-5 card-services" key={project._id}>
                  <div className="card-body">
-                    <Link to={`/projects/${project._id}`}>
+                    <Link to={`/services/${project._id}`}>
                       <h3>{project.service}</h3>
                     </Link>
                     <p>{project.title}</p>
@@ -51,7 +50,7 @@ class ProjectList extends Component {
     return(
       <div className="project-list-style container">
       <div className="user-section1-btn-agregar">
-        <Link to='/addproject' className="col-lg-12 btn btn-success btn-agregar"><h1>AGREGA UN SERVICIO</h1></Link>
+        <Link to='/addservice' className="col-lg-12 btn btn-success btn-agregar"><h1>AGREGA UN SERVICIO</h1></Link>
       </div>
       {this.ownershipCheck(this.state)}
         <div >

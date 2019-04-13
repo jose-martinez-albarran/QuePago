@@ -15,7 +15,7 @@ class ProjectDetails extends Component {
 
   getSingleProject = () => {
     const { params } = this.props.match;
-    axios.get(`http://localhost:5000/api/projects/${params.id}`, {withCredentials:true})
+    axios.get(`${process.env.REACT_APP_API_URL}/projects/${params.id}`, {withCredentials:true})
     .then( responseFromApi =>{
       const theProject = responseFromApi.data;
       this.setState(theProject);
@@ -41,7 +41,7 @@ class ProjectDetails extends Component {
     const { params } = this.props.match;
     axios.delete(`http://localhost:5000/api/projects/${params.id}`, {withCredentials:true})
     .then( responseFromApi =>{
-        this.props.history.push('/projects'); // !!!         
+        this.props.history.push('/services'); // !!!         
     })
     .catch((err)=>{
         console.log(err)
@@ -64,7 +64,7 @@ class ProjectDetails extends Component {
       <div className="project-list-style container">
         <h1>{this.state.title}</h1>
         <p>{this.state.description}</p>
-        <Link className="btn btn-link" to={'/projects'}>Regresar a tus Servicios</Link>
+        <Link className="btn btn-link" to={'/services'}>Regresar a tus Servicios</Link>
         <div >
         {this.ownershipCheck(this.state)}
           </div>

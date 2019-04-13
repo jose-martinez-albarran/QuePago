@@ -27,11 +27,11 @@ class EditProject extends Component {
 
     event.preventDefault();
 
-    axios.put(`http://localhost:5000/api/projects/${this.props.theProject._id}`, { title, description, service, telephone, email, account ,status }, {withCredentials:true})
+    axios.put(`${process.env.REACT_APP_API_URL}/projects/${this.props.theProject._id}`, { title, description, service, telephone, email, account ,status }, {withCredentials:true})
     .then( () => {
         this.props.getTheProject();
         // after submitting the form, redirect to '/projects'
-        this.props.history.push('/projects');    
+        this.props.history.push('/services');    
     })
     .catch( error => console.log(error) )
   }
