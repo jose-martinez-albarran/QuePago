@@ -53,8 +53,8 @@ class Login extends Component {
     } else {
       return(
         <div className="loginPage">
-         <Link to={"/projects"} className='col-lg-10 btn btn-secondary links-login'><h1>SERVICIOS</h1></Link>
-         <Link to='/addproject' className="col-lg-10 btn btn-success btn-agregar links-login"><h1>AGREGA UN SERVICIO</h1></Link>
+         <Link to={"/services"} className='col-lg-10 btn btn-secondary links-login'><h1>SERVICIOS</h1></Link>
+         <Link to='/addservice' className="col-lg-10 btn btn-success btn-agregar links-login"><h1>AGREGA UN SERVICIO</h1></Link>
       </div>
       )
     }

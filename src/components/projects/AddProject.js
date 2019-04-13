@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Radio from './Radio';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class AddProject extends Component {
   constructor(props){
@@ -114,6 +115,7 @@ class AddProject extends Component {
         <div className="agregar-servicio">   {this.serviceSelect1(this.state)}</div>
         <div>   {this.serviceSelect2(this.state)}</div>
         <div>   {this.serviceSelect3(this.state)}</div>
+        <Link to={"/services"} className='btn btn-secondary links-login'>Regresar a Servicios</Link>
       </div>
     )
   }

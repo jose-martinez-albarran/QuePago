@@ -57,9 +57,9 @@ class App extends Component {
           <Switch>
             <Route exact path='/' render={() => <Home userInSession={this.state.loggedInUser} getUser={this.getTheUser} />}/>
             <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
-            <ProtectedRoute user={this.state.loggedInUser} path='/projects/:id' component={ProjectDetails} />
-            <ProtectedRoute user={this.state.loggedInUser} path='/projects' component={ProjectList} />
-            <ProtectedRoute user={this.state.loggedInUser} path='/addproject' component={AddProject} />
+            <ProtectedRoute user={this.state.loggedInUser} path='/services/:id' component={ProjectDetails} />
+            <ProtectedRoute user={this.state.loggedInUser} path='/services' component={ProjectList} />
+            <ProtectedRoute user={this.state.loggedInUser} path='/addservice' component={AddProject} />
           </Switch>
           <Footer />
         </div>
@@ -72,8 +72,8 @@ class App extends Component {
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
               <Route exact path='/' render={() => <Home />}/>
-              <ProtectedRoute user={this.state.loggedInUser} path='/projects/:id' component={ProjectDetails} />
-              <ProtectedRoute user={this.state.loggedInUser} path='/projects' component={ProjectList} />
+              <ProtectedRoute user={this.state.loggedInUser} path='/services/:id' component={ProjectDetails} />
+              <ProtectedRoute user={this.state.loggedInUser} path='/services' component={ProjectList} />
             </Switch>
           <Footer />
         </div>
